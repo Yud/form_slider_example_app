@@ -23,7 +23,7 @@ end
 gem 'haml-rails'
 
 gem 'jquery-rails'
-gem 'form_slider', :git => 'git@github.com:Yud/form_slider.git', :branch => 'rails-3.2'
+gem 'form_slider', :git => 'git://github.com/Yud/form_slider.git', :branch => 'rails-3.2'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
