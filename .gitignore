@@ -16,3 +16,4 @@
 /form_slider/**/**
 .rvmrc
 .sass-cache
+/config/database.yml
