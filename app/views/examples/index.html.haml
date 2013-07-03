@@ -1,0 +1,48 @@
+.row
+  .span9.offset2
+    %h1 Slider Form Examples
+    %h4 jQuery UI Slider with Ruby on Rails Forms
+
+    .border
+    %h2 slider_form_for
+
+    %h4 Basic usage
+    .well
+      = slider_form_for @film, url: "/" do |f|
+        = f.slider_field :rating, min: 1, max: 10, step: 1, color: 'green'
+      = gist 5917544
+
+    %h4 Customized label
+    .well
+      = slider_form_for @film, url: "/" do |f|
+        = f.slider_field :rating, label: { name: 'Score:', append: ' out of 10' }, color: '#83B0D8'
+      = gist 5917585
+
+    %h4 Displaying the slider's value in a specific element
+    .well
+      .slider_value
+      = slider_form_for @film, url: "/" do |f|
+        = f.slider_field :rating, label: false, value_display: '.slider_value', color: '#83B0D8'
+      = gist 5917853
+
+    .border
+    %h2 slider_field_tag
+
+    %h4 Basic usage
+    .well
+      = form_tag "/submit" do
+        = slider_field_tag :rating, 5, min: 1, max: 10, step: 1, color: 'green'
+      = gist 5901285
+
+    %h4 Customized label
+    .well
+      = form_tag "/submit" do
+        = slider_field_tag :rating, 3, label: { name: 'Score:', append: ' out of 10' }, color: '#83B0D8'
+      = gist 5918087
+
+    %h4 Displaying the slider's value in a specific element
+    .well
+      .slider_tag_value
+      = form_tag "/submit" do
+        = slider_field_tag :rating, 3, label: false, value_display: '.slider_tag_value', color: '#83B0D8'
+      = gist 5918065
