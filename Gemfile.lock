@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:Yud/form_slider.git
+  remote: git://github.com/Yud/form_slider.git
   revision: be11622c8b2f2b40f2c28340a529554a60b8203d
   branch: rails-3.2
   specs:
