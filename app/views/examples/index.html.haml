@@ -12,7 +12,7 @@
         = f.slider_field :rating, min: 1, max: 10, step: 1, color: 'green'
       = gist 5917544
 
-    %h4 Customized label
+    %h4 Customizing the label
     .well
       = slider_form_for @film, url: "/" do |f|
         = f.slider_field :rating, label: { name: 'Score:', append: ' out of 10' }, color: '#83B0D8'
@@ -34,7 +34,7 @@
         = slider_field_tag :rating, 5, min: 1, max: 10, step: 1, color: 'green'
       = gist 5901285
 
-    %h4 Customized label
+    %h4 Customizing the label
     .well
       = form_tag "/submit" do
         = slider_field_tag :rating, 3, label: { name: 'Score:', append: ' out of 10' }, color: '#83B0D8'
@@ -46,3 +46,11 @@
       = form_tag "/submit" do
         = slider_field_tag :rating, 3, label: false, value_display: '.slider_tag_value', color: '#83B0D8'
       = gist 5918065
+
+    .border
+    %h2 Formtastic
+    .well
+      = semantic_form_for @film, url: "/" do |f|
+        = f.inputs do
+          = f.input :rating, as: :slider, min: 1, max: 10, step: 1, color: 'green'
+      = gist 6069362

@@ -22,7 +22,9 @@ end
 gem 'haml-rails'
 
 gem 'jquery-rails'
-gem 'form_slider', :git => 'git://github.com/Yud/form_slider.git', :branch => 'rails-3.2'
+gem 'formtastic'
+gem 'formtastic-bootstrap'
+gem 'form_slider'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -36,5 +38,6 @@ gem 'form_slider', :git => 'git://github.com/Yud/form_slider.git', :branch => 'r
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+group :development do
+  gem 'pry'
+end
